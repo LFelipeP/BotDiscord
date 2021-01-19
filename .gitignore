@@ -23,8 +23,6 @@ coverage
 *.lcov
 
 
-./config.json
-
 # nyc test coverage
 .nyc_output
 
@@ -106,3 +104,5 @@ dist
 
 # TernJS port file
 .tern-port
+
+config.json

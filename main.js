@@ -54,7 +54,8 @@ client.on("message", async message => {
                 if (message.author.id != author) {
                     return;
                 }
-                else {
+                else 
+                {
                     id = message.content.slice(0, 3);
                     reg = message.content.slice(config.prefix.length).trim().split(/ +/g).shift().toLowerCase();
                     db.get("perguntas")
@@ -72,11 +73,11 @@ client.on("message", async message => {
                     return;
                 }
                 else {
-                    db.get("perguntas")
-                        .find({ id: id }).assign({ resposta: message.content }).write();
+                    await db.get("perguntas")
+                            .find(id).assign({ resposta: message.content }).write();
                     message.channel.send(`${message.author.username} pergunta registrada com sucesso`);
-                    return;
                 }
+                return;
             });
             return;
         }

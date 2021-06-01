@@ -1,5 +1,7 @@
 *.json
 config.json
+./config.json
+./bd.json
 
 # Logs
 logs
